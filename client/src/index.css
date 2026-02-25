@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Premium Glass Card Effect */
+/* .glass-card {
+  position: relative;
+  backdrop-filter: blur(20px);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.02)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.5),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+} */
+
+.glass-card {
+  backdrop-filter: blur(16px);
+  background: rgba(20, 20, 20, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+}
+
+div.react-github-calendar__count-text {
+  display: none !important;
+}
+
+/* Premium Mesh Gradient Background */
+
+.mesh-bg {
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  top: -25%;
+  left: -25%;
+  background: 
+    radial-gradient(circle at 30% 40%, rgba(255,255,255,0.12), transparent 40%),
+    radial-gradient(circle at 70% 60%, rgba(255,255,255,0.08), transparent 45%),
+    radial-gradient(circle at 50% 80%, rgba(255,255,255,0.06), transparent 50%);
+  filter: blur(120px);
+  animation: meshMove 25s ease-in-out infinite alternate;
+}
+
+@keyframes meshMove {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(-80px, 60px) scale(1.1);
+  }
+  100% {
+    transform: translate(60px, -40px) scale(1.05);
+  }
+}
